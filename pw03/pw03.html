@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
     <title>Tags de Objeto</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/919/919827.png"> <!--ícone da aba do navegador-->
 </head>
 <body>
+    <h1>Tags de Objeto</h1>
     <!-- Formulário de envio-->
-    <form method="post" action=""> <!-- action: qual o local que vai ser enviado o formulário.-->
+    <form id="frm1" method="post" action=""> <!-- action: qual o local que vai ser enviado o formulário.(em branco por enquanto)-->
         <!-- Caixas de entrada-->
         nome: <input type="text" id="nome" size="50" maxlength="40" minlength="3"
-        placeholder="digite seu nome completo" required/><br/>
-        <!--type text: tipo de entrada, no caso texto | id: identificação desse campo | 
+        placeholder="digite seu nome completo" required pattern="[A-z\s]{6,80}"/><br/> <!--pattern="[A-z\s]{6,80}" -> caracter de A a z e espaço em branco, no mín 6 caracteres e no max 80
+            type text: tipo de entrada, no caso texto | id: identificação desse campo | 
             size: tamanho na tela em caracteres | maxlength: tamanho máximo de caracteres que poderá ser digitado
-        | placeholder: dica que aparecerá no campo | required: atributo do html5: só faz o submite do 
-    formulário se esse campo for preenchido (campo obrigatório) -->
-        email: <input type="email" id="email" size="50" placeholder="digite seu email" required/><br/>           
-        idade: <input type="number" id="idade" size="50" min="18" max="65" placeholder="digite sua idade" required/><br/>
-        <!--min: idade mínima, max: idade máxima-->
+            | placeholder: dica que aparecerá no campo | required: atributo do html5: só faz o submite do 
+            formulário se esse campo for preenchido (campo obrigatório) | pattern (expressão regular): regra pdo que será aceito como entrada-->
+        email: <input type="email" id="email" size="50" placeholder="digite seu email" required/><br/>      
+        <!--min: idade mínima, max: idade máxima-->    
+        idade: <input type="number" id="idade" min="18" max="65" placeholder="idade" required/><br/>
+        altura: <input type="number" id="altura" min="0.5" max="2.5" step="0.01" placeholder="altura" required/><br/>
+        senha: <input type="password" id="senha" size="50"pattern="[0-9A-z\s]{8,20}" required/> <br/>
         data: <input type="date" id="data" required/><br/>
-        senha: <input type="password" id="senha" maxlength="10" size="50" required/> <br/><br/>
+        hora: <input type="time" id="hora" required/><br/>
+        Nota: <input type="range" id="nota" min="1" max="10" placeholder="nota" required/><br/>
         
-        <!-- Caixas de check box-->
-        Permissões: <input type="checkbox" id="role1" valur="1" checked/>Ler <!-- value: associar o valor digitado ler depois no javascript ou na página dinâmica | 
+        <!-- Caixas de check box | botões de multipla escolha-->
+        Permissões: <input type="checkbox" id="c1" valur="1"/>Curso 1 <!-- value: associar o valor digitado ler depois no javascript ou na página dinâmica | 
             checked: vem já com a caixinha selecionada-->
-                    <input type="checkbox" id="role1"/>Gravar
-                    <input type="checkbox" id="role1"/>Alterar
-                    <input type="checkbox" id="role1"/>Excluir
+                    <input type="checkbox" id="c2"checked/>Curso 2 <!--checked: trás a opção pré-selecionada-->
+                    <input type="checkbox" id="c3"/>Curso 3
         <br/>
-        Periodo:   <!-- type=radio: Id é independente, porém o name é igual para todos, assim quando selecionar um desmarca os outros -->    
+        Periodo:   <!-- botão de esolha única -> type=radio: Id é independente/diferente, porém o name é igual para todos, assim quando selecionar um desmarca os outros -->    
                     <input type="radio" id="m" valur="1" name="periodo"/>Manhã 
                     <input type="radio" id="t" valur="1" name="periodo"/>Tarde
                     <input type="radio" id="n" valur="1" name="periodo"/>Noite         
         <br/><br/>
           <!-- textarea e select são objetos de exceção-->  
-        <!-- mensagem de texto que tenha um espaço maior de digitação-->  
-        Mensagem: <textarea id="msg" placeholder="digite sua mensagem"></textarea>
-        <br/><br/>
-        <!-- caixa de seleção (combo), cada item da caixa de seleção coloca-se um option-->
+                <!-- caixa de seleção (combo), cada item da caixa de seleção coloca-se um option-->
         Unidade: 
         <select id="unidade">
             <option>Fatec 1</option>
@@ -43,9 +45,23 @@
             <option>Fatec 3</option>
         </select>
         <br/><br/>
+        <!-- mensagem de texto que tenha um espaço maior de digitação-->  
+        Mensagem: <textarea id="msg" rows="5" cols="50" placeholder="digite sua mensagem"></textarea>
+        <br/><br/>
         <!--botão, duas formas de criar botão-->
         <button id="b1">Enviar</button> <!--importante colocar a identificação do botão-->
         <input type="button" id="b2" value="Testar"/>
     </form>
+
+
+    <!--www.w3schools.com/html/-->
+    <img src="https://w3schools.com/html/img_girl.jpg" alt="Girl in a jacket"width="320" height="240"> <br/>
+    <iframe src="https://giphy.com/embed/fZ9GI5ailzbws" width="320" height="240" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/trayvon-martin-fZ9GI5ailzbws"></a></p>
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+
 </body>
 </html>
