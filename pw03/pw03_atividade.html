@@ -1,0 +1,49 @@
+<!--Crie um página HTML5 utilizando as tags de objeto que represente a imagem abaixo:
+http://professor.norton.net.br/wp-content/uploads/2019/08/pw03.png
+Utilizando os recursos de HTML5 aplique as regras:
+Campo Email – campo requerido no formato de email
+Campo Nome – campo requerido
+Campo Telefone, utilizando expressão regular para o seguinte padrão 99999-9999-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+</head>
+<body>
+    <h1><font color="red"><b>Contato</b></font></h1>
+    <p>
+        <i>Seja bem vindo, preencha o <b>formulário</b> abaixo para:</i>
+    </p>
+    <ul>
+        <li>duvidas</li>
+        <li>sugestões</li>
+        <li>criticas</li>
+        <li>Orçamentos</li>
+    </ul>
+    <p>
+        Caso queira ver nossos produtos, clique <a href="http://professor.norton.net.br/" target="new">aqui</a>:
+    </p>
+    <form method="post" action="">
+        nome: <input type="text" id="nome" size="50" maxlength="40" minlength="3"
+        placeholder="digite seu nome" required/><br/>
+        email: <input type="email" id="email" size="50" placeholder="digite seu email" required/><br/>           
+        telefone: <input type="tel" id="telefone" pattern="[0-9]{4}-[0-9]{4}" size="20" min="8" max="11" placeholder="digite seu telefone" required/><br/>
+        assunto:
+        <select id="assunto">
+            <option selected>Duvidas</option>
+            <option>Sugestões</option>
+            <option>Criticas</option>
+            <option>Orçamentos</option>
+        </select><br/> 
+        Deseja receber uma copia deste e-mail:
+        <input type="radio" id="s" valur="1" name="copia" required/>Sim 
+        <input type="radio" id="n" valur="1" name="copia" required/>Não        
+        <br/><br/>
+        mensagem: <textarea id="msg" placeholder="digite sua mensagem" required></textarea>
+        <br/><br/>
+        <button id="b1">Enviar</button>
+    </form>
+</body>
+</html>
