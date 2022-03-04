@@ -1,0 +1,60 @@
+h1 {
+    margin-top: 3px;
+    font-size: 100px;
+	font-stretch:ultra-expanded;	
+	transform: rotate(-4deg);  
+}
+
+.p30{
+    padding: 30px;
+}
+
+.center{
+    text-align: center;
+}
+
+input, select, textarea, button 
+{
+	background-color: rgb(113, 255, 248);	
+	border: solid 5px rgb(0, 17, 255);
+	color: rgb(0, 17, 255);
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+}
+
+.mt{
+    margin-top: 5px;
+    margin:5px;
+    padding: 20px;
+}
+
+button:hover{
+	opacity: 0.3;
+}
+
+form {
+	border: solid 2px yellow; 	 
+	border-radius: 10px;
+	padding:20px;
+	box-shadow: 7px 7px 2px rgb(0, 193, 251);	
+}
+
+body
+{
+	background-color: black;
+	color: white;	
+	font-family: arial;
+	font-size: 16px;
+}
+
+.b1{
+	background-color: rgb(113, 255, 248);
+	border: solid 5px rgb(0, 17, 255);
+	color: rgb(0, 17, 255);
+	width: 100px;
+	height: 50px;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 10px; /* arredonda bordas*/
+}

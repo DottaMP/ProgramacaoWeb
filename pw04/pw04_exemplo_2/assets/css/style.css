@@ -1,0 +1,60 @@
+body
+{
+	background-color: black;
+	color: white;	
+	font-family: arial;
+	font-size: 12px;
+}
+input, select, textarea  /*comentario */
+{
+	background-color: lime;
+	color: black;
+	border: dotted 2px black;
+	margin: 5px;
+	padding: 5px;
+}
+#msg
+{
+	background-color: yellow;	
+	border: solid 2px red;
+	color: red;
+	width: 50%;
+	height: 100px;
+}
+.botoes
+{
+	background-color: gray;
+	color: yellow;	
+	width: 100px;
+	height: 30px;
+	padding: 5px;
+	border: solid yellow 2px;
+	font-weight: bold;
+	border-radius: 10px; /* arredonda bordas*/
+}
+.botoes:hover
+{
+	color: white;
+	border-color: white;	
+}
+form 
+{
+	border: solid 2px yellow; 	 
+	border-radius: 20px;
+	padding:20px;
+	background-image: url("desert.jpg");
+	box-shadow: 7px 7px 2px silver;	
+}
+h1 
+{
+	font-weight:900;
+	font-stretch:ultra-expanded;	
+	transform: rotate(-4deg);  
+}
+
+label
+{
+	width:100px;
+	display:block;
+	float:left; /*encaixar a esquerda*/
+}

@@ -1,0 +1,33 @@
+<!--Cascade Style Sheet (Folha de Estilo em Cascata)
+Utilizado para unificar as configurações de formatação de conteúdo em um único arquivo.
+Permite a padronização de um conjunto de páginas estáticas, diminuindo a dificuldade e o tempo de manutenção.
+Reduz o tamanho das paginas HTML pois não há a necessidade das tags de formatação.
+Objetivo é padronizar a formatação entre todas as páginas do projeto.
+TAG HTML: <link rel="stylesheet" type="text/css" href="estilo.css">
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW04</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+	<form class="janela">
+		<h1>Login</h1>
+		informe o seu email e senha abaixo:<br/>
+		<label>email:</label>
+		<input type="email" id="txtEmail" size="40" /><br/>
+		<label>senha:</label>
+		<input type="password" id="txtSenha" size="20" /><br/>
+		<div class="direita">
+			<button id="entrar">Entrar</button>		
+			<button id="novo">Não tenho cadastro</button>
+			</div>			
+	</form>
+</body>
+</html>
+

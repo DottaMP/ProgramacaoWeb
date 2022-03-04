@@ -1,0 +1,51 @@
+/* seletor por TAG */
+body
+{
+	background-color: gray;
+	color: white;	
+	font-family: arial;
+}
+input, select, textarea, button 
+{
+	background-color: yellow;	
+	border: solid 1px black;
+	color: black;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+}
+/*seletor por id*/
+#novo {
+	background-color:black;
+	color: white;	
+	width: 150px;		
+}
+#entrar{
+	background-color:white;
+	color: black;	
+	font-weight: bold;
+	width: 150px;		
+}
+/*seletor por apelido/classe*/
+.janela{
+	width: 50%;
+	margin-left:25%;
+	padding: 10px;
+	background-color: #333333;
+	border: solid 1px white;
+	box-shadow: 5px 5px black;
+}
+label {
+	width:100px;
+	display: inline-table;
+	vertical-align: middle;
+	text-align: right;
+}
+.direita{
+	width: 100%;
+	text-align: right;		
+}
+
+button:hover{
+	text-shadow: 0 0 3px yellow, 0 0 5px #0000FF;
+}
