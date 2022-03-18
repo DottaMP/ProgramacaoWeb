@@ -1,0 +1,65 @@
+#corpo {
+    width: 80%;
+    margin-left: 10%;
+    background-color: red;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 90vh;
+}
+
+#corpo #topo {
+    width: 100%;
+    height: 20%;
+    background-color: green;
+    float: left;
+}
+
+#corpo #topo h1 {
+    color: white;
+    text-align: center;
+}
+
+#corpo #topo button {
+    display: none;
+}
+
+#corpo #menu {
+    background-color: yellow;
+    width: 30%;
+    height: 80%;
+    float: left;
+}
+
+#corpo #conteudo {
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    float: left;
+}
+
+/*Sobreposição da padrão*/
+@media screen and (max-width:420px)
+and (min-width: 0px) {
+    body{
+        padding: 0px;
+        margin: 0px;
+    }
+    #corpo{
+        width: 100%;
+        height: 100vh;
+        margin-left: 0;
+    }
+
+    #corpo #topo button {
+        display: block;
+    }
+
+    #corpo #menu {
+        display: none;
+    }
+
+    #corpo #conteudo {
+        width: 100%;
+        background-color: orange;
+    }
+}

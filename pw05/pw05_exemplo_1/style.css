@@ -1,0 +1,34 @@
+#corpo {
+    width: 80%;
+    margin-left: 10%;
+    background-color: red;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 90vh;
+}
+
+#corpo #topo {
+    width: 100%;
+    height: 20%;
+    background-color: green;
+    float: left;
+}
+
+#corpo #topo h1 {
+    color: white;
+    text-align: center;
+}
+
+#corpo #menu {
+    background-color: yellow;
+    width: 30%;
+    height: 80%;
+    float: left;
+}
+
+#corpo #conteudo {
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    float: left;
+}
