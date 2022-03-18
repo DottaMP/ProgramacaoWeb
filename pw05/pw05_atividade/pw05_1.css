@@ -1,4 +1,4 @@
-#corpo {
+#vermelho {
     width: 80%;
     margin-left: 10%;
     background-color: red;
@@ -7,21 +7,21 @@
     height: 90vh;
 }
 
-#corpo #topo {
+#vermelho #verde {
     width: 100%;
     height: 20%;
     background-color: green;
     float: left;
 }
 
-#corpo #menu {
+#vermelho #azul {
     background-color: blue;
     width: 50%;
     height: 80%;
     float: left;
 }
 
-#corpo #conteudo {
+#vermelho #amarelo {
     background-color: yellow;
     width: 50%;
     height: 80%;
