@@ -1,60 +1,50 @@
-
-#corpo {
-    width: 20%;
-    margin-left: 10%;
-    margin: auto;
+#vermelho{
     background-color: red;
-    padding: 3px;
+    width:80%;
+    height: 90vh;
+    padding: 5px;
     box-sizing: border-box;
-    height: 100vh;
+    margin-left: 10%;
 }
 
-#corpo #topo {
-    width: 100%;
-    height: 25%;
+#vermelho #verde {
     background-color: green;
+    width: 100%;
+    height: 20%;
+    float:left;    
 }
 
-#corpo #menu {
+#vermelho #azul {
     background-color: blue;
-    width: 100%;
-    height: 45%;
+    width: 50%;
+    height: 80%;
+    float:left;    
 }
 
-#corpo #conteudo {
+#vermelho #amarelo {
     background-color: yellow;
-    width: 100%;
-    height: 25%;
+    width: 50%;
+    height: 80%;
+    float:left;    
 }
 
-/*Sobreposição da padrão*/
-@media screen and (max-width:420px)
-and (min-width: 0px) {
-    body{
-        padding: 0px;
-        margin: 0px;
-    }
-    #corpo{
+@media screen and (max-width:420px) 
+and (min-width:0px) {
+    body{margin: 0px; padding: 0px;}
+    #vermelho{
         width: 100%;
         height: 100vh;
-        margin-left: 0;
+        margin-left: 0;       
     }
-
-    #corpo #topo {
+    #vermelho #verde{
+        height: 30%;
+    }    
+    #vermelho #azul{
         width: 100%;
-        height: 25%;
-        background-color: green;
+        height: 35%;
     }
-
-    #corpo #menu {
-        background-color: blue;
+    #vermelho #amarelo{
         width: 100%;
-        height: 45%;
-    }
-    
-    #corpo #conteudo {
-        background-color: yellow;
-        width: 100%;
-        height: 25%;
+        height: 35%;
     }
 }
