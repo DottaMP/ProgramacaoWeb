@@ -1,0 +1,140 @@
+<!--1-Utilizando o formulário da atividade (PW03), crie um novo botão 
+    “copiar” associado ao um evento do jquery, leia o valor de todos 
+    os campos do formulário e mostre o conteúdo dentro de um paragrafo.-->
+
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>JQuery</title>
+        <!--Script para acessar o jquery-->
+        <script src="./jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-1 text-danger"><strong><em>Contato</em></strong></h1>
+        <p class="mt-2"><em>Seja bem vindo, preencha o <strong>formulário</strong> abaixo para:</em></p>
+        <ul>
+            <li>Dúvidas</li>
+            <li>Sugestões</li>
+            <li>Críticas</li>
+            <li>Orçamentos</li>
+        </ul>
+        <p>Caso queira ver nossos produtos, <a href="http://professor.norton.net.br/index.php/2022/03/17/pw-bootstrap/"
+                target="_blank">clique aqui</a></p>
+        <form class="form-horizontal" action="/action_page.php">
+            <div class="col-lg-8">
+                <div class="row form-group">
+                    <label class="control-label col-sm-2 mt-2" for="nome">Nome:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" name="nome">
+                    </div>
+                </div>
+                <div class="row mt-3 form-group">
+                    <label class="control-label col-sm-2 mt-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email">
+                    </div>
+                </div>
+                <div class="row mt-3 form-group">
+                    <label class="control-label col-sm-2 mt-2" for="telefone">Telefone:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="phone" placeholder="Digite seu telefone"
+                            name="phone">
+                    </div>
+                </div>
+
+                <div class="col-sm-offset-2 col-sm-2 mt-3">
+                    <label for="sel1" class="form-label">Assunto:</label>
+                    <select class="form-select" id="sel1" name="sellist1">
+                        <option>Dúvidas</option>
+                        <option>Sugestões</option>
+                        <option>Críticas</option>
+                        <option>Orçamentos</option>
+                    </select>
+                </div>
+
+                <p class="copia mt-2"></p>
+                <button type="button" class="btn btn-primary mt-1" id="b1">Copiar</button>
+                <button type="button" class="btn btn-primary mt-1" id="b2">Limpar Conteúdo</button>
+
+                <h6 class="mt-2">Deseja receber uma copia deste e-mail:</h6>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="opS" name="optradio" value="option1" checked>
+                    <label class="form-check-label" for="radio1">Sim</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="opN" name="optradio" value="option2">
+                    <label class="form-check-label" for="radio2">Não</label>
+                </div>
+
+                <div class="form-group mt-2">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" onclick="validar()" class="btn btn-outline-success">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script lang="javascript">
+
+        $("#b1").click(function () {
+            var x = $("#nome").val();
+            var y = $("#email").val();
+            var z = $("#phone").val();
+            $(".copia").append(x+" - "+y+" - "+z+"");
+        });
+
+        $("#b2").click(function () {
+            var x = $("#nome").val();
+            var y = $("#email").val();
+            var z = $("#phone").val();
+            $(".copia").empty();
+        });
+
+        function validar() {
+            if (nome.value.length <= 3) {
+                alert("Digite seu nome completo!");
+                nome.value = "";
+                nome.focus();
+                return false;
+            }
+    
+            if (email.value.length < 6 || email.value.indexOf("@") <= 0 || email.value.lastIndexOf(".") <= email.value.indexOf("@")) {
+                alert("Email invalido!");
+                email.focus();
+                email.value = "";
+                return false;
+            }
+    
+            if (phone.value == "" || isNaN(phone.value)) {
+                alert("Digite seu telefone! Apenas Números!");
+                phone.value = "";
+                phone.focus();
+                return false;
+            } else if (phone.value.length < 11 || phone.value.length > 11) {
+                alert("Seu telefone precisa ter 11 números no formato 99999999999");
+                phone.value = "";
+                phone.focus();
+                return false;
+            }
+    
+            alert("Dados Enviado com Sucesso!");
+            frm1.submit();
+    
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
