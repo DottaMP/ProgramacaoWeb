@@ -79,7 +79,7 @@ Criar uma função para cada operação-->
         $a = $_POST["n1"];
         $b = $_POST["n2"];
         $c = $a * $b;
-        echo "<h4> A subtração é = $c </h4>";
+        echo "<h4> A multiplicação é = $c </h4>";
     }
 
     function dividir (){
@@ -89,18 +89,17 @@ Criar uma função para cada operação-->
             echo "<h4> Não é possível dividir por 0!</h4>";
         } else{
             $c = $a / $b;
-            echo "<h4> A subtração é = $c </h4>";
+            echo "<h4> A divisão é = $c </h4>";
         }
     }
 
     function tabuada (){
         $a = $_POST["n1"];
-        echo "<ul>";
+        echo "<h4> Tabuada $a </h4>";
         for ($i=1; $i<=10; $i++){
             $p = $a * $i;
             echo "<li>$a X $i = $p </li>";
         }
-        echo "</ul>";
     }
 
 ?>
