@@ -6,7 +6,7 @@ create table produto(
 	codigo bigint primary key auto_increment,
 	titulo varchar(100),
 	descritivo varchar(100),
-	valor varchar (100),
+	valor decimal (18,2),
 	qtd bigint,
 	categoria varchar(100)
 );

@@ -42,22 +42,26 @@ listaProduto.php-->
                             <label for="titulo">Título</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="descritivo" name="descritivo" placeholder="Descritivo">
+                            <input textearea class="form-control" id="descritivo" name="descritivo" rows="5" cols="30" placeholder="Descritivo">
                             <label for="descritivo">Descritivo</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor">
+                            <input type="number" class="form-control" id="valor" name="valor" step="0.01" placeholder="Valor"> <!--step para formatar o valor-->
                             <label for="valor">Valor</label>
                         </div>
                         <div class="form-floating mb-3">
                             <input type="number" class="form-control" id="qtd" name="qtd" placeholder="Quantidade">
                             <label for="qtd">Quantidade</label>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria">
-                            <label for="categoria">Categoria</label>
+                        <div>
+                            <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
+                                <option selected>Categoria</option>
+                                <option value="Eletrônico">Eletrônico</option>
+                                <option value="Cozinha">Cozinha</option>
+                                <option value="Quarto">Quarto</option>
+                            </select>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center m-5">
                             <button type="submit" class="btn btn-primary" name="b1">Inserir</button>
                             <button type="submit" class="btn btn-primary" name="b2">Pesquisar</button>
                             <button type="submit" class="btn btn-primary" name="b3">Alterar</button>
@@ -92,7 +96,14 @@ listaProduto.php-->
 </html>
 
 <?php 
+    /*
+    function retornaConexao(){
+        $conexao = new mysqli("localhost", "root", "root", "pw10_atividade");
+        return $conexao;
+    }*/
+
     function inserir(){
+        /*$conexao = retornaConexao();*/
         $titulo = $_POST["titulo"];
         $descritivo = $_POST["descritivo"];
         $valor = $_POST["valor"];
@@ -104,11 +115,14 @@ listaProduto.php-->
         $sql = "insert into produto (titulo, descritivo, valor, qtd, categoria) 
             values ('$titulo', '$descritivo', '$valor', '$qtd', '$categoria')"; 
         
-        mysqli_query($conexao, $sql);
+        if(mysqli_query($conexao, $sql)){
+            echo "<br><h4>Registro inserido com sucesso!</h4>";
+        } else{
+            echo "<br><h4>Ocorreu um erro, tente mais tarde!</h4>";
+        }
 
         mysqli_close($conexao);
     
-        echo "<br><h4>Registro inserido com sucesso!</h4>";
     }
 
     function pesquisar($codigo){
@@ -156,7 +170,7 @@ listaProduto.php-->
         
         mysqli_query($conexao, $sql); 
         mysqli_close($conexao); 
-    
+        
         echo "<br><h4>Registro alterado com sucesso!</h4>";
     }
 

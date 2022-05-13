@@ -37,7 +37,7 @@
 
                     <table class="text-center table table-hover mt-3">
                         <thead>
-                            <tr>
+                            <tr class="table-info">
                                 <th scope="col">#</th>
                                 <th scope="col">Título</th>
                                 <th scope="col">Descritivo</th>
